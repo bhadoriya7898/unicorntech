@@ -67,12 +67,13 @@ export default function Navbar() {
 </a>
 
 
-                <Link
-                  to=""
-                  className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
-                >
-                  Pricing
-                </Link>
+     <span
+  className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2] cursor-pointer"
+  onClick={() => window.alert("Pricing section coming soon!")}
+>
+  Pricing
+</span>
+
 
                 <Link
                   to="/contact"
