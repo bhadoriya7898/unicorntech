@@ -26,101 +26,105 @@ export default function Footer() {
             "
           >
             {/* ================== LEFT : LOGO ================== */}
-<div
-  className="
-    flex 
-    items-start
-    gap-[22.44px]
-    lg:w-[285.5px]
-    w-full
-    justify-center lg:justify-start
-  "
->
-  <img
-    src={logo}
-    alt="logo"
-    style={{
-      width: 83.4,
-      height: 80.7,
-      objectFit: "cover",
-    }}
-  />
+            <div
+              className="
+                flex 
+                items-start
+                gap-[22.44px]
+                lg:w-[285.5px]
+                w-full
+                justify-center lg:justify-start
+              "
+            >
+              <img
+                src={logo}
+                alt="logo"
+                style={{
+                  width: 83.4,
+                  height: 80.7,
+                  objectFit: "cover",
+                }}
+              />
 
-  <div className="flex flex-col leading-none">
-    <span
-      className="font-[var(--font-outfit)]"
-      style={{
-        fontWeight: 550,
-        fontSize: "31.22px",
-        color: "#221E1F",
-        lineHeight: "32px",
-      }}
-    >
-      Its
-    </span>
+              <div className="flex flex-col leading-none">
+                <span
+                  className="font-[var(--font-outfit)]"
+                  style={{
+                    fontWeight: 550,
+                    fontSize: "31.22px",
+                    color: "#221E1F",
+                    lineHeight: "32px",
+                  }}
+                >
+                  Its
+                </span>
 
-    <span
-      className="font-[var(--font-outfit)] whitespace-nowrap"  // ← IMPORTANT
-      style={{
-        fontWeight: 550,
-        fontSize: "31.22px",
-        color: "#221E1F",
-        lineHeight: "32px",
-      }}
-    >
-      Unicorn Tech
-    </span>
+                <span
+                  className="font-[var(--font-outfit)] whitespace-nowrap"
+                  style={{
+                    fontWeight: 550,
+                    fontSize: "31.22px",
+                    color: "#221E1F",
+                    lineHeight: "32px",
+                  }}
+                >
+                  Unicorn Tech
+                </span>
 
-    <span
-      className="font-[var(--font-outfit)]"
-      style={{
-        fontWeight: 550,
-        fontSize: "14.63px",
-        lineHeight: "20px",
-        color: "#221E1F",
-        marginTop: 6,
-      }}
-    >
-      Travel CRM
-    </span>
-  </div>
-</div>
-
-
-
+                <span
+                  className="font-[var(--font-outfit)]"
+                  style={{
+                    fontWeight: 550,
+                    fontSize: "14.63px",
+                    lineHeight: "20px",
+                    color: "#221E1F",
+                    marginTop: 6,
+                  }}
+                >
+                  Travel CRM
+                </span>
+              </div>
+            </div>
 
             {/* ================== CENTER : MENU ================== */}
-            {/* CENTER : MENU */}
-<div
-  className="
-    flex items-center justify-center
-    gap-[31px]
-    lg:w-[363px]
-    w-full
-    flex-nowrap
-  "
->
-  <a className="font-[var(--font-outfit)] font-semibold" style={{ fontSize: 18, color: "#673EE2" }}>
-    Home
-  </a>
+            <div
+              className="
+                flex items-center justify-center
+                gap-[20px]
+                lg:gap-[31px]
+                lg:w-[363px]
+                w-full
+                flex-wrap         /* ⭐ MOBILE FIX */
+              "
+            >
+              <a
+                className="font-[var(--font-outfit)] font-semibold"
+                style={{ fontSize: 18, color: "#673EE2" }}
+              >
+                Home
+              </a>
 
-  <a className="font-[var(--font-outfit)] font-semibold" style={{ fontSize: 18, color: "#221E1F" }}>
-    Features
-  </a>
+              <a
+                className="font-[var(--font-outfit)] font-semibold"
+                style={{ fontSize: 18, color: "#221E1F" }}
+              >
+                Features
+              </a>
 
-  <a className="font-[var(--font-outfit)] font-semibold" style={{ fontSize: 18, color: "#221E1F" }}>
-    Pricing
-  </a>
+              <a
+                className="font-[var(--font-outfit)] font-semibold"
+                style={{ fontSize: 18, color: "#221E1F" }}
+              >
+                Pricing
+              </a>
 
-  {/* 🔥 FIXED: FORCE SINGLE LINE */}
-  <a
-    className="font-[var(--font-outfit)] font-semibold whitespace-nowrap"
-    style={{ fontSize: 18, color: "#221E1F" }}
-  >
-    Contact Us
-  </a>
-</div>
-
+              <a
+                className="font-[var(--font-outfit)] font-semibold whitespace-nowrap"
+                style={{ fontSize: 18, color: "#221E1F" }}
+              >
+                Contact Us
+              </a>
+            </div>
 
             {/* ================== RIGHT : SOCIAL ICONS ================== */}
             <div

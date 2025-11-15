@@ -12,25 +12,25 @@ export default function Navbar() {
       <nav className="w-full bg-[#F2F3F7] fixed top-0 left-0 z-50 shadow-sm">
         <div className="max-w-[1300px] w-full mx-auto pt-[12px] px-4 lg:px-0">
 
-          {/* TOP ROW */}
+          {/* ================= TOP ROW ================= */}
           <div className="flex items-center justify-between h-[56px]">
 
             {/* LEFT — LOGO + TEXT */}
-            <div className="flex items-center gap-4 lg:gap-[120px]">
+            <div className="flex items-center gap-3 sm:gap-4 lg:gap-[80px] max-w-[220px]">
 
               {/* LOGO BLOCK */}
-              <div className="flex items-center gap-[15.32px]">
+              <div className="flex items-center gap-[12px]">
                 <img
                   src={logo}
-                  className="w-[48px] h-[48px] lg:w-[56.93px] lg:h-[55.10px]"
+                  className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] lg:w-[56px] lg:h-[55px]"
                   alt="Logo"
                 />
 
-                {/* TEXT */}
-                <div className="flex flex-col -mt-[2px]">
+                {/* TEXT BLOCK */}
+                <div className="flex flex-col">
                   <p
                     className="font-[var(--font-outfit)] font-semibold text-[#221E1F]"
-                    style={{ fontSize: "18px", lineHeight: "16px" }}
+                    style={{ fontSize: "16px", lineHeight: "14px" }}
                   >
                     Its <br /> Unicorn Tech
                   </p>
@@ -38,9 +38,9 @@ export default function Navbar() {
                   <p
                     className="font-[var(--font-outfit)]"
                     style={{
-                      fontSize: "9.99px",
-                      lineHeight: "15.32px",
-                      marginTop: "4px",
+                      fontSize: "10px",
+                      lineHeight: "12px",
+                      marginTop: "3px",
                       color: "#221E1F",
                       fontWeight: 500,
                     }}
@@ -49,42 +49,41 @@ export default function Navbar() {
                   </p>
                 </div>
               </div>
-
-              {/* DESKTOP MENU */}
-              <div className="hidden lg:flex items-center gap-[31px]">
-                <Link
-                  to="/"
-                  className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
-                >
-                  Home
-                </Link>
-
-             <a
-  href="/#features-section"
-  className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
->
-  Features
-</a>
-
-
-     <span
-  className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2] cursor-pointer"
-  onClick={() => window.alert("Pricing section coming soon!")}
->
-  Pricing
-</span>
-
-
-                <Link
-                  to="/contact"
-                  className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
-                >
-                  Contact us
-                </Link>
-              </div>
             </div>
 
-            {/* DESKTOP BUTTON */}
+            {/* ============ DESKTOP MENU ============ */}
+            <div className="hidden lg:flex items-center gap-[31px]">
+              <Link
+                to="/"
+                className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
+              >
+                Home
+              </Link>
+
+              {/* Smooth scroll */}
+              <a
+                href="/#features-section"
+                className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
+              >
+                Features
+              </a>
+
+              <span
+                className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2] cursor-pointer"
+                onClick={() => window.alert("Pricing section coming soon!")}
+              >
+                Pricing
+              </span>
+
+              <Link
+                to="/contact"
+                className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
+              >
+                Contact us
+              </Link>
+            </div>
+
+            {/* DESKTOP DEMO BUTTON */}
             <Link
               to="/demo"
               className="hidden lg:flex bg-[#673EE2] items-center gap-2 px-6 py-3 rounded-lg hover:opacity-90"
@@ -95,20 +94,19 @@ export default function Navbar() {
               <span className="text-white text-[16px]">↗</span>
             </Link>
 
-            {/* MOBILE MENU TOGGLE */}
+            {/* MOBILE MENU BUTTON */}
             <button
               className="lg:hidden text-[#221E1F] text-3xl"
               onClick={() => setOpen(!open)}
             >
               ☰
             </button>
-
           </div>
 
-          {/* BORDER */}
-          <div className="border-t border-[#BFBFBF] mt-2 lg:block"></div>
+          {/* BORDER LINE */}
+          <div className="border-t border-[#BFBFBF] mt-2"></div>
 
-          {/* MOBILE DROPDOWN MENU */}
+          {/* ================= MOBILE MENU ================= */}
           {open && (
             <div className="lg:hidden flex flex-col mt-4 pb-4 gap-4">
 
@@ -120,32 +118,33 @@ export default function Navbar() {
                 Home
               </Link>
 
-<a
-  href="/#features-section"
-  className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] hover:text-[#673EE2]"
->
-  Features
-</a>
-
-
-
-              <Link
-                to="/pricing"
+              <a
+                href="/#features-section"
                 className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px]"
                 onClick={() => setOpen(false)}
               >
+                Features
+              </a>
+
+              <span
+                onClick={() => {
+                  alert("Pricing section coming soon!");
+                  setOpen(false);
+                }}
+                className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px] cursor-pointer"
+              >
                 Pricing
-              </Link>
+              </span>
 
               <Link
                 to="/contact"
-                className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px]"
                 onClick={() => setOpen(false)}
+                className="font-[var(--font-outfit)] font-semibold text-[#221E1F] text-[18px]"
               >
                 Contact us
               </Link>
 
-              {/* MOBILE — BOOK A DEMO BUTTON */}
+              {/* Mobile Demo Button */}
               <Link
                 to="/demo"
                 onClick={() => setOpen(false)}
@@ -158,7 +157,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* SPACE BELOW NAVBAR */}
+      {/* FIXED NAVBAR SPACING */}
       <div className="pt-[90px]"></div>
 
     </div>

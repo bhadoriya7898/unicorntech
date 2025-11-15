@@ -30,7 +30,7 @@ export default function Features() {
   ];
 
   return (
-    // ⭐ Added ID for smooth scrolling — NO OTHER CHANGE
+    // ⭐ ID for scroll
     <section id="features-section" className="w-full bg-[#F2F3F7] pt-[150px] pb-[120px]">
       <div className="max-w-[1300px] mx-auto px-4 flex flex-col items-center">
 
@@ -48,20 +48,14 @@ export default function Features() {
           </div>
         </div>
 
-        {/* SUB HEADING — RESPONSIVE */}
+        {/* SUB HEADING */}
         <p
           className="
             text-center font-[var(--font-outfit)] font-semibold text-[#221E1F]
-            text-[24px]
-            sm:text-[30px]
-            lg:text-[36px]
-            leading-[100%]
-            mx-auto
+            text-[24px] sm:text-[30px] lg:text-[36px]
+            leading-[100%] mx-auto
           "
-          style={{
-            maxWidth: "760px",
-            letterSpacing: "0px",
-          }}
+          style={{ maxWidth: "760px" }}
         >
           All-in-One B2C CRM Travel Platform for Businesses Growth
         </p>
@@ -78,14 +72,13 @@ export default function Features() {
           Experience the travel next generation of customer relationship management.
         </p>
 
-        {/* GRID SECTION — FIGMA PERFECT GAP */}
+        {/* GRID SECTION */}
         <div
           className="
             grid grid-cols-1
             sm:grid-cols-2
             lg:grid-cols-3
-            gap-x-[32px]
-            gap-y-[40px]
+            gap-x-[32px] gap-y-[40px]
             mt-[60px] w-full
           "
         >
@@ -93,27 +86,24 @@ export default function Features() {
             <div
               key={i}
               className="
-                w-[420px] h-[181px] bg-white rounded-[20px] border border-[#E5E5E5]
+                w-full max-w-[420px] h-[181px]
+                bg-white rounded-[20px] border border-[#E5E5E5]
                 p-[24px] flex flex-col justify-start shadow-sm mx-auto
                 transition-all duration-300
                 hover:shadow-lg hover:scale-[1.02]
               "
             >
-              {/* Top Row: Icon + Title */}
+              {/* HEADER ROW */}
               <div className="flex items-center gap-[16px]">
-                
-                {/* ICON BOX */}
                 <div className="w-[65px] h-[65px] rounded-[14px] bg-[#F2F3F7] flex items-center justify-center">
                   <img src={featureLogo} className="w-[32px] h-[32px]" alt="icon" />
                 </div>
 
-                {/* TITLE */}
                 <h3
                   className="text-[#221E1F] font-[var(--font-outfit)] font-semibold"
                   style={{
                     fontSize: "26px",
                     lineHeight: "100%",
-                    letterSpacing: "0px",
                   }}
                 >
                   {card.title}
@@ -127,7 +117,6 @@ export default function Features() {
                   fontSize: "18px",
                   fontWeight: 600,
                   lineHeight: "140%",
-                  maxWidth: "380px",
                 }}
               >
                 {card.desc}
