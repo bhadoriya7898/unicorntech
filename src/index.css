@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Tailwind v4 theme variables */
+@theme inline {
+  --font-outfit: "Outfit", sans-serif;
+
+  /* You can add more custom tokens later */
+}
+
+/* Global base font */
+@layer base {
+  body {
+    font-family: var(--font-outfit);
+  }
+}
